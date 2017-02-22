@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			font-size: 12px;
+		}
+		ul,li{
+			padding: 0;
+			margin: 0;
+		}
+		.container{
+			width: 984px;
+			height: 875px;
+			margin: 0 auto;
+		}
+		.top{
+			width: 984px;
+			height: 66px;
+		}
+		.top-left{
+			height: 66px;
+			line-height:66px;
+			width: 134px;
+			padding-left: 34px;
+			font-size:35px;
+			font-weight: 900;
+			color: #d9001a;
+			float: left;
+		}
+		.top-right{
+			width: 230px;
+			height: 66px;
+			float: right;
+		}
+		.top-right p{
+			padding-left:95px;
+			margin-bottom:5px;
+			font-size: 12px;
+		}
+		.eng{
+			padding-left: 20px;
+		}
+		.top-right input{
+			width: 196;
+			height: 18px;
+			border: solid 1px #cbcbcb;
+			vertical-align: top;
+		}
+		.nav{
+			height: 30px;
+			line-height: 30px;
+			background: #cc0021;
+		}
+		.nav li{
+			float: left;
+			list-style: none;
+		}
+		.nav li a{
+			display: block;
+			text-decoration: none;
+			font-size: 14px;
+			color: white;
+			font-family:"微软雅黑";
+			padding-left: 23px;
+			padding-right: 29px;
+
+		}
+		.nav  li:first-child a{
+			padding-left: 32px;
+		}
+		.nav  li:last-child a{
+			padding-left: 40px;
+		}
+		.nav li a:hover{
+			background: #5a5a5a;
+		}
+
+		.nav li .guanyu{
+			background: #5a5a5a;
+		}
+		.main{
+			overflow: hidden;
+		}
+		.main-top li{
+			float: left;
+			list-style: none;
+		}
+		.main-top li:hover{
+			background: red;
+		}
+		.main-bot .xinpin{
+			width: 282px;
+			margin-left: 24px;
+			float: left;
+			margin-top: 30px;
+		}
+		.main-bot .xinpin .tuijian{
+			width: 282px;
+		}
+		.main-bot .xinpin p:first-child{
+			float: left;
+			margin-top: -3px;
+		}
+		.main-bot .xinpin .spannum{
+			float: right;
+		}
+		.main-bot .xinpin .spannum span{
+			float: left;
+			padding: 3px 5px;
+			color: white;
+			text-decoration: none;
+			background: #6d6d6d;
+			margin-right: 1px;
+
+		}
+		.main-bot .xinpin .spannum .onselect{
+			background: #e51a2d;
+		}
+		.showme{
+			width: 984px;
+			height: 600px;
+			display: none;
+		}
+		.show{
+			display: block;
+		}
+		.deng{
+			width: 280px;
+			height: 154px;
+			margin-top: 10px;
+			border: solid #e8e8e8 1px;
+			text-align:center;
+			clear: both;
+		}
+		#banner-img li{
+			list-style: none;
+		}
+		#banner-img img{
+			width: 280px;
+			height: 154px;
+		}
+		.gu10{
+			width: 282px;
+			color: #787878;
+			line-height: 20px;
+		}
+		.xiangxi{
+			width: 64px;
+			padding:6px 8px 6px 12px;
+			background: #cc0021;
+		}
+		.new{
+			width: 354px;
+			height: 320px;
+			border: 1px solid #ebebeb;
+			float: left;
+			margin-top: 30px;
+			margin-left: 30px;
+			border-bottom:none;
+			border-top: none;
+		}
+		.tai{
+			float: left;
+			padding-left: 28px;
+		}
+		.more{
+			float: right;
+			padding-right: 24px;
+			padding-top: 10px;
+			color: #da0021;
+		}
+		.hua{
+			width: 300px;
+			margin: 0 auto;
+			clear: both;
+			overflow: hidden;
+		}
+		.hua p{
+			border-top: dotted 1px #aeaeae;
+			padding-left: 10px;
+			padding-top: 10px;
+			background: url(images/sj.jpg) no-repeat 2px 14px;
+		}
+		.hua p span{
+			font-size: 12px;
+			color: #b6b6b6;
+		}
+		.chanpin{
+			float: left;
+			margin-left: 26px;
+		}
+		.yinyong{
+			width: 252px;
+			margin-top: 30px;
+		}
+		.yinyong .hui{
+			float: left;
+		}
+		.mor{
+			float: right;
+			padding-top: 10px;
+			color: #da0021;
+		}
+		.led{
+			margin-top: 5px;
+
+		}
+		.led p{
+			padding-left: 10px;
+			line-height: 20px;
+			background: url(images/zhen.jpg) no-repeat 0px 10px;
+		}
+		.footer{
+			margin-top: 24px;
+			margin-bottom: 8px;
+			width: 984px;
+			height: 45px;
+			line-height: 45px;
+			background: #494949;
+			overflow: hidden;
+		}
+		.wangzhan{
+			float: left;
+			padding-left: 36px;
+		}
+		.wangzhan a{
+			text-decoration: none;
+			color: #fbfbfb;
+		}
+		.huayang{
+			float: right;
+			padding-right: 28px;
+			color: #fefefe;
+		}
+		.huayang span{
+			color: #ffffff;
+		}
+	</style>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="./js/index.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="top">
+				<div class="top-left">
+					ADAVO
+				</div>
+				<div class="top-right">
+					<p>中文版 | ENGLISH</p>
+					<div class="eng">
+						<input type="text"><img src="images/sou.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="" class="shouye">首页</a></li>
+					<li><a href="" class="guanyu">关于我们</a></li>
+					<li><a href="">产品中心</a></li>
+					<li><a href="">新闻中心</a></li>
+					<li><a href="">产品应用</a></li>
+					<li><a href="">商务合作</a></li>
+					<li><a href="">服务和支持</a></li>
+					<li><a href="">人力资源</a></li>
+					<li><a href="">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="banner">
+				<img class="show showme" src="images/one.jpg" alt="">
+				<img class="showme"  src="images/two.jpg" alt="">
+				<img class="showme"  src="images/three.jpg" alt="">
+				<img class="showme"  src="images/four.jpg" alt="">
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-top">
+				<ul id="tabfirst">
+					<li class="tabin"><a  class="img1"><img class="tian" src="images/light1.jpg" alt=""></a></li>
+					<li><a  class="img2"><img class="tian" src="images/light2.jpg" alt=""></a></li>
+					<li><a  class="img3"><img class="tian" src="images/light3.jpg" alt=""></a></li>
+					<li><a  class="img4"><img class="tian" src="images/light4.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="main-bot">
+				<div class="xinpin">
+					<div class="tuijian">
+						<p>新品推荐</p>
+						<div class="spannum">
+							<span class="onselect">1</span>
+							<span>2</span>
+							<span>3</span>
+							<span>4</span>
+							<span>5</span>
+							<span>6</span>
+						</div>
+					</div>
+					<div class="deng">
+						<ul id="banner-img">
+							<li><img src="images/one.jpg"/></li>
+							<li><img src="images/two.jpg"/></li>
+							<li><img src="images/three.jpg"/></li>
+							<li><img src="images/four.jpg"/></li>
+							<li><img src="images/five.jpg"/></li>
+							<li><img src="images/three.jpg"/></li>
+						</ul>
+					</div>
+
+					<p class="gu10">ADAYO品牌的GU10/E27射灯是220V LED射灯的理想替<br />代品。这款GU10/E27射灯是高效的led射灯产品，仅<br />仅只是消耗了5W的电压，真正意义上降低了能源...</p>
+					<div class="xiangxi">详细介绍>></div>
+				</div>
+				<div class="new">
+					<div class="newinline">
+						<div class="dong">
+							<div class="tai">新闻动态</div>
+							<div class="more">MORE</div>
+						</div>
+						<div class="hua">
+							<p>华阳热看LED产业，组建光电技术公司激流杨帆<br /><span>2012-10-10</span></p>
+							<p>华阳热看LED产业，组建光电技术公司激流杨帆<br /><span>2012-10-10</span></p>
+							<p>华阳热看LED产业，组建光电技术公司激流杨帆<br /><span>2012-10-10</span></p>
+							<p>华阳热看LED产业，组建光电技术公司激流杨帆<br /><span>2012-10-10</span></p>
+							<p>华阳热看LED产业，组建光电技术公司激流杨帆<br /><span>2012-10-10</span></p>
+							<p>华阳热看LED产业，组建光电技术公司激流杨帆<br /><span>2012-10-10</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="chanpin">
+					<div class="yinyong">
+							<div class="hui">产品应用</div>
+							<div class="mor">MORE</div>
+					</div>
+					<div><img src="images/huizhou.jpg" alt=""></div>
+					<div class="led">
+						<p>惠州市重点路段LED路灯项目都是凡</p>
+						<p>惠州市重点路段LED路灯项目都是凡</p>
+						<p>惠州市重点路段LED路灯项目都是凡</p>
+						<p>惠州市重点路段LED路灯项目都是凡</p>
+						<p>惠州市重点路段LED路灯项目都是凡</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="wangzhan">
+				<a href="">网站地图</a> | <a href="">访问统计</a> | <a href="">友情链接</a> | <a href="">法律声明</a>
+			</div>
+			<div class="huayang">
+				花样集团有限公司 <span class="ban">版权所有</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
